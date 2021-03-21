@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100%;
+}
+@media (min-width: 1000px) {
+  body {
+    background-position: 0% 180%;
+  }
+}
+
+.content {
+  max-width: 375px;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .content {
+    max-width: 1440px;
+  }
+}
+
+.testimonials {
+  width: calc(375px * 2);
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .testimonials {
+    width: 100%;
+  }
+}
+
+.testimonial {
+  width: 375px;
+}
+@media (min-width: 1000px) {
+  .testimonial {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.testimonial__images {
+  width: 100%;
+  position: relative;
+  background-image: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0;
+  padding: 1.5em 0;
+}
+@media (min-width: 1000px) {
+  .testimonial__images {
+    width: 50%;
+  }
+}
+.testimonial__images__user {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: mover-imagen 5s linear infinite;
+}
+@media (min-width: 1000px) {
+  .testimonial__images__user {
+    width: 80%;
+  }
+}
+.testimonial__images__icons {
+  position: absolute;
+  bottom: 1em;
+  display: flex;
+  overflow: hidden;
+  width: 120px;
+  height: 50px;
+  left: calc(50% - (120px / 2));
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 12px rgba(32, 32, 70, 0.2);
+}
+@media (min-width: 1000px) {
+  .testimonial__images__icons {
+    left: calc((50% / 2) - (120px / 2));
+  }
+}
+.testimonial__images__icons__buttons {
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.testimonial__images__icons__buttons:hover {
+  background-color: rgba(32, 32, 70, 0.3);
+}
+.testimonial__images__icons__buttons:active {
+  border: none;
+}
+.testimonial__texts {
+  width: 100%;
+  background-image: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 2em;
+}
+@media (min-width: 1000px) {
+  .testimonial__texts {
+    width: 50%;
+    display: flex;
+    margin: auto 0;
+  }
+}
+.testimonial__texts__article {
+  width: 100%;
+}
+.testimonial__texts__article__comment {
+  width: 100%;
+  padding: 1em 0;
+  font-size: 0.7em;
+  text-align: center;
+  color: #202046;
+  font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .testimonial__texts__article__comment {
+    position: relative;
+    text-align: start;
+    z-index: 1;
+    width: 120%;
+    font-size: 1em;
+  }
+}
+.testimonial__texts__article__user {
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .testimonial__texts__article__user {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}
+.testimonial__texts__article__user__name {
+  font-size: 0.6em;
+  text-align: center;
+  color: #202046;
+  font-weight: 700;
+}
+@media (min-width: 1000px) {
+  .testimonial__texts__article__user__name {
+    font-size: 0.7rem;
+  }
+}
+.testimonial__texts__article__user__working {
+  display: block;
+  font-size: 0.5em;
+  color: #babacf;
+  text-align: center;
+  font-weight: 500;
+}
+@media (min-width: 1000px) {
+  .testimonial__texts__article__user__working {
+    font-size: 0.7rem;
+  }
+}
+@keyframes mover-imagen {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.attribution {
+  position: absolute;
+  padding: 1em 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.4em;
+  color: #babacf;
+}
+.attribution a {
+  color: #202046;
+}

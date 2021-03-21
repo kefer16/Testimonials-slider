@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 100%;
+    @media (min-width: 1000px) {
+        background-position: 0% 180%;
+    
+    }
+}
+.content {
+    
+    max-width: 375px;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    @media (min-width: 1000px) {
+        max-width: 1440px;
+    
+    }
+}

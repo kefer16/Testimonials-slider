@@ -1,0 +1,189 @@
+@import "./root";
+@import "./colors";
+
+.testimonials {
+    width: calc(375px * 2);
+
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1000px) {
+        width: 100%;
+    }
+}
+.testimonial {
+    width: 375px;
+
+    @media (min-width: 1000px) {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &__images {
+        width: 100%;
+        position: relative;
+        background-image: url("../images/pattern-bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0;
+        padding: 1.5em 0;
+
+        @media (min-width: 1000px) {
+            width: 50%;
+        }
+
+        &__user {
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+            border-radius: 10px;
+
+            -webkit-animation: mover-imagen 5s linear infinite;
+            animation: mover-imagen 5s linear infinite;
+            @media (min-width: 1000px) {
+                width: 80%;
+            }
+        }
+        &__icons {
+            position: absolute;
+            bottom: 1em;
+            display: flex;
+            overflow: hidden;
+            width: 120px;
+            height: 50px;
+            left: calc(50% - (120px / 2));
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 0 12px rgba($Dark_Blue, 0.2);
+            @media (min-width: 1000px) {
+                left: calc((50% / 2) - (120px / 2));
+            }
+            &__buttons {
+                width: 50%;
+                border: none;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+                    background-color: rgba($Dark_Blue, 0.3);
+                }
+                &:active {
+                    border: none;
+                }
+            }
+        }
+    }
+    &__texts {
+        width: 100%;
+        background-image: url("../images/pattern-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 2em;
+        @media (min-width: 1000px) {
+            width: 50%;
+            display: flex;
+
+            margin: auto 0;
+        }
+        &__article {
+            width: 100%;
+
+            &__comment {
+                width: 100%;
+                padding: 1em 0;
+                font-size: 0.7em;
+                text-align: center;
+                color: $Dark_Blue;
+                font-weight: 300;
+                @media (min-width: 1000px) {
+                    position: relative;
+                    text-align: start;
+                    z-index: 1;
+                    width: 120%;
+                    font-size: 1em;
+                }
+            }
+            &__user {
+                width: 100%;
+
+                @media (min-width: 1000px) {
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                }
+
+                &__name {
+                    font-size: 0.6em;
+                    text-align: center;
+                    color: $Dark_Blue;
+                    font-weight: 700;
+                    @media (min-width: 1000px) {
+                        font-size: 0.7rem;
+                    }
+                }
+                &__working {
+                    display: block;
+                    font-size: 0.5em;
+                    color: $Grayish_Blue;
+                    text-align: center;
+                    font-weight: 500;
+                    @media (min-width: 1000px) {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes mover-imagen {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes mover-imagen {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.attribution {
+    position: absolute;
+    padding: 1em 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    
+    font-size: 0.4em;
+    color: $Grayish_Blue;
+    
+    & a {
+        color: $Dark_Blue;
+    }
+}
